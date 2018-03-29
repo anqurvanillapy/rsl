@@ -6,6 +6,7 @@
 ## Concerns
 
 * Patterns and anti-patterns
+* Features (not general)
 
 ## There's a reason, actually
 
