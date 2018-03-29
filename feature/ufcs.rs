@@ -1,3 +1,11 @@
+/**
+ *  UFCS
+ *  ====
+ *
+ *  Uniform (universal) function call syntax: Good for "dot-autocomplete", good
+ *  for health.
+ */
+
 trait Foo {
     fn foo(&self);
     fn bar(&self);
