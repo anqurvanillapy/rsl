@@ -7,6 +7,7 @@
 
 * Patterns and anti-patterns
 * Features (not general)
+* Memory safety
 
 ## There's a reason, actually
 
