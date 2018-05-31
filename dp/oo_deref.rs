@@ -1,11 +1,11 @@
+use std::ops::Deref;
+
 /**
  *  `Deref`-based OO
  *  ================
  *
  *  An infamous anti-pattern: The deref polymorphism.
  */
-
-use std::ops::Deref;
 
 struct Base {}
 
@@ -16,7 +16,7 @@ impl Base {
 }
 
 struct Derived {
-    b: Base
+    b: Base,
 }
 
 impl Deref for Derived {
