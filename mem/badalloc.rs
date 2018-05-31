@@ -11,17 +11,16 @@ use std::{mem, ptr};
  *  > "Please welcome to the stage, OOM killer!!"
  */
 
-// TODO: f0 not working.
-
 fn f0() {
     unsafe {
         let siz = 512 * 1024 * 1024;
         let layout = Layout::from_size_align_unchecked(siz, 1024);
-        let raw: *mut i32 =
+        let mut raw: *mut i32 =
             mem::transmute(Alloc::alloc(&mut std::heap::Global, layout));
-        ptr::write(raw, 42);
-        println!("{}", ptr::read(raw));
-        std::thread::sleep(std::time::Duration::from_secs(3));
+        for i in 0..(siz / 4) {
+            ptr::write(raw, i as i32);
+            raw = raw.offset(1);
+        }
     }
 }
 
