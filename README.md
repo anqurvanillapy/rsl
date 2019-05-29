@@ -9,6 +9,7 @@
 * Features (not general)
 * Optimization
 * Memory safety
+* Types
 
 ## There's a reason, actually
 
